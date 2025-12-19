@@ -18,7 +18,7 @@ package: lint test build
 	pnpm run package
 
 install-extension: package
-	$$SHELL -ic 'code --install-extension ghostty-config-*.vsix --force'
+	$$SHELL -ic 'code --install-extension ghostty-syntax-*.vsix --force'
 
 clean:
 	rm -rf out node_modules *.vsix

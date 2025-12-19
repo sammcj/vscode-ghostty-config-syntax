@@ -72,7 +72,7 @@ function createDefaultConfig(filePath: string): void {
 }
 
 export function registerOpenConfigCommand(): vscode.Disposable {
-  return vscode.commands.registerCommand('ghostty-config.openConfig', async () => {
+  return vscode.commands.registerCommand('ghostty-syntax.openConfig', async () => {
     const locations = getConfigLocations();
     const existingLocations = locations.filter((loc) => loc.exists);
 

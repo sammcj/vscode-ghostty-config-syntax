@@ -3,7 +3,7 @@
 VSCode extension for Ghostty terminal config files. Uses native VSCode providers (not LSP) for simplicity.
 
 <ARCHITECTURE>
-**Schema-driven validation**: All config options defined in `schema/ghostty-config.schema.json`. Providers read from this schema - update the JSON to add/modify options, not TypeScript.
+**Schema-driven validation**: All config options defined in `schema/ghostty-syntax.schema.json`. Providers read from this schema - update the JSON to add/modify options, not TypeScript.
 
 **Provider pattern**: Three providers registered in `src/extension.ts`:
 - CompletionProvider: Key and value completions
@@ -29,7 +29,7 @@ Schema designed for future Zed extension compatibility (same JSON, different pro
 
 **Unit tests cannot import vscode**: Tests run with plain mocha, not VSCode test runner. Test core logic (parser, validators, schema) directly. Don't test providers - they require VSCode runtime.
 
-**Schema path in tests**: Use `path.join(__dirname, '../../../schema/ghostty-config.schema.json')` from compiled test files in `out/test/suite/`.
+**Schema path in tests**: Use `path.join(__dirname, '../../../schema/ghostty-syntax.schema.json')` from compiled test files in `out/test/suite/`.
 
 **CI versioning**: Release workflow extracts version from git tag (`v1.2.3` → `1.2.3`) and updates package.json before packaging.
 </GOTCHAS>

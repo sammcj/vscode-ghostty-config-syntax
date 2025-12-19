@@ -12,7 +12,7 @@ VS Code extension providing syntax highlighting, validation, completions, and ho
 
 ## Installation
 
-Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SamMcLeod.ghostty-config) or search for "Ghostty Config" in the Extensions view.
+Install from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=SamMcLeod.ghostty-syntax) or search for "Ghostty" in the Extensions view.
 
 ## Usage
 
@@ -32,9 +32,9 @@ Supported config locations:
 
 | Setting                             | Default   | Description                           |
 |-------------------------------------|-----------|---------------------------------------|
-| `ghostty-config.enableDiagnostics`  | `true`    | Enable real-time validation           |
-| `ghostty-config.diagnosticSeverity` | `Warning` | Severity for unknown key diagnostics  |
-| `ghostty-config.showPlatformHints`  | `true`    | Show hints for platform-specific keys |
+| `ghostty-syntax.enableDiagnostics`  | `true`    | Enable real-time validation           |
+| `ghostty-syntax.diagnosticSeverity` | `Warning` | Severity for unknown key diagnostics  |
+| `ghostty-syntax.showPlatformHints`  | `true`    | Show hints for platform-specific keys |
 
 ## Duplicate Key Handling
 
@@ -53,7 +53,7 @@ Unlike some other config extensions, this extension correctly handles keys that 
 - [Ghostty Documentation](https://ghostty.org/docs)
 - [Config Reference](https://ghostty.org/docs/config/reference)
 - [Keybind Reference](https://ghostty.org/docs/config/keybind/reference)
-- [Report Issues](https://github.com/sammcj/vscode-ghostty-config/issues)
+- [Report Issues](https://github.com/sammcj/vscode-ghostty-syntax/issues)
 
 ## Development
 

@@ -16,7 +16,7 @@ export async function loadSchema(context: { extensionPath: string }): Promise<Gh
     return cachedSchema;
   }
 
-  const schemaPath = path.join(context.extensionPath, 'schema', 'ghostty-config.schema.json');
+  const schemaPath = path.join(context.extensionPath, 'schema', 'ghostty-syntax.schema.json');
 
   try {
     cachedSchema = loadSchemaFromPath(schemaPath);

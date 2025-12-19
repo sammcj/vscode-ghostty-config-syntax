@@ -1,5 +1,5 @@
 {
-  "name": "ghostty-config",
+  "name": "ghostty-syntax",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@vscode/vsce-sign",
@@ -13,12 +13,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sammcj/vscode-ghostty-config.git"
+    "url": "https://github.com/sammcj/vscode-ghostty-syntax.git"
   },
   "bugs": {
-    "url": "https://github.com/sammcj/vscode-ghostty-config/issues"
+    "url": "https://github.com/sammcj/vscode-ghostty-syntax/issues"
   },
-  "homepage": "https://github.com/sammcj/vscode-ghostty-config#readme",
+  "homepage": "https://github.com/sammcj/vscode-ghostty-syntax#readme",
   "icon": "resources/icon.png",
   "engines": {
     "vscode": "^1.107.1"
@@ -39,10 +39,10 @@
   "contributes": {
     "languages": [
       {
-        "id": "ghostty-config",
+        "id": "ghostty-syntax",
         "aliases": [
           "Ghostty Config",
-          "ghostty-config"
+          "ghostty-syntax"
         ],
         "filenames": [
           "config"
@@ -55,26 +55,26 @@
     ],
     "grammars": [
       {
-        "language": "ghostty-config",
+        "language": "ghostty-syntax",
         "scopeName": "source.ghostty",
-        "path": "./syntaxes/ghostty-config.tmLanguage.json"
+        "path": "./syntaxes/ghostty-syntax.tmLanguage.json"
       }
     ],
     "commands": [
       {
-        "command": "ghostty-config.openConfig",
+        "command": "ghostty-syntax.openConfig",
         "title": "Ghostty: Open Config"
       }
     ],
     "configuration": {
       "title": "Ghostty Config",
       "properties": {
-        "ghostty-config.enableDiagnostics": {
+        "ghostty-syntax.enableDiagnostics": {
           "type": "boolean",
           "default": true,
           "description": "Enable real-time validation and diagnostics"
         },
-        "ghostty-config.diagnosticSeverity": {
+        "ghostty-syntax.diagnosticSeverity": {
           "type": "string",
           "enum": [
             "Error",
@@ -85,7 +85,7 @@
           "default": "Warning",
           "description": "Severity level for unknown key diagnostics"
         },
-        "ghostty-config.showPlatformHints": {
+        "ghostty-syntax.showPlatformHints": {
           "type": "boolean",
           "default": true,
           "description": "Show hints for platform-specific configuration keys"

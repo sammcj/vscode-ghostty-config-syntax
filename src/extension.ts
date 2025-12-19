@@ -9,8 +9,8 @@ export async function activate(context: vscode.ExtensionContext): Promise<void> 
   const schema = await loadSchema(context);
 
   const selector: vscode.DocumentSelector = [
-    { scheme: 'file', language: 'ghostty-config' },
-    { scheme: 'untitled', language: 'ghostty-config' },
+    { scheme: 'file', language: 'ghostty-syntax' },
+    { scheme: 'untitled', language: 'ghostty-syntax' },
   ];
 
   // Register completion provider
