@@ -11,9 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    defaults:
-      run:
-        working-directory: ghostty-config
     steps:
       - uses: actions/checkout@v4
 
@@ -54,5 +51,5 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: ghostty-config/*.vsix
+          files: "*.vsix"
           generate_release_notes: true
