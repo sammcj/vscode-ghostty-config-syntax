@@ -2,7 +2,7 @@ import * as assert from 'assert';
 import * as path from 'path';
 import { loadSchemaFromPath, getOptionInfo, isRepeatableKey } from '../../schema/loader';
 
-const schemaPath = path.join(__dirname, '../../../schema/ghostty-syntax.schema.json');
+const schemaPath = path.join(__dirname, '../../../schema/ghostty-config-syntax.schema.json');
 
 suite('Schema Loader', () => {
   test('loads schema successfully', () => {

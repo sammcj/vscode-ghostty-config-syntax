@@ -12,7 +12,7 @@ export class GhosttyDiagnosticProvider implements vscode.Disposable {
     context: vscode.ExtensionContext,
     private schema: GhosttySchema
   ) {
-    this.diagnosticCollection = vscode.languages.createDiagnosticCollection('ghostty-syntax');
+    this.diagnosticCollection = vscode.languages.createDiagnosticCollection('ghostty-config-syntax');
     context.subscriptions.push(this.diagnosticCollection);
 
     // Update diagnostics on document change
@@ -49,11 +49,11 @@ export class GhosttyDiagnosticProvider implements vscode.Disposable {
   }
 
   private isGhosttyConfig(document: vscode.TextDocument): boolean {
-    return document.languageId === 'ghostty-syntax';
+    return document.languageId === 'ghostty-config-syntax';
   }
 
   private updateDiagnostics(document: vscode.TextDocument): void {
-    const config = vscode.workspace.getConfiguration('ghostty-syntax');
+    const config = vscode.workspace.getConfiguration('ghostty-config-syntax');
     const enableDiagnostics = config.get<boolean>('enableDiagnostics', true);
 
     if (!enableDiagnostics) {
@@ -132,7 +132,7 @@ export class GhosttyDiagnosticProvider implements vscode.Disposable {
 
     // Platform-specific hint
     if (option.platforms && option.platforms.length > 0) {
-      const config = vscode.workspace.getConfiguration('ghostty-syntax');
+      const config = vscode.workspace.getConfiguration('ghostty-config-syntax');
       const showPlatformHints = config.get<boolean>('showPlatformHints', true);
 
       if (showPlatformHints) {
@@ -239,7 +239,7 @@ export class GhosttyDiagnosticProvider implements vscode.Disposable {
   }
 
   private getDiagnosticSeverity(): vscode.DiagnosticSeverity {
-    const config = vscode.workspace.getConfiguration('ghostty-syntax');
+    const config = vscode.workspace.getConfiguration('ghostty-config-syntax');
     const severity = config.get<string>('diagnosticSeverity', 'Warning');
 
     switch (severity) {
