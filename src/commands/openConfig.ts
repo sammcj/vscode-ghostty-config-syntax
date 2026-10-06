@@ -24,18 +24,20 @@ function getConfigLocations(): ConfigLocation[] {
 
   // macOS-specific location
   if (process.platform === 'darwin') {
-    const macosPath = path.join(
+    const macosConfigDir = path.join(
       homeDir,
       'Library',
       'Application Support',
-      'com.mitchellh.ghostty',
-      'config'
+      'com.mitchellh.ghostty'
     );
-    locations.push({
-      path: macosPath,
-      label: `macOS: ${macosPath}`,
-      exists: fs.existsSync(macosPath),
-    });
+    for (const filename of ['config.ghostty', 'config']) {
+      const macosPath = path.join(macosConfigDir, filename);
+      locations.push({
+        path: macosPath,
+        label: `macOS: ${macosPath}`,
+        exists: fs.existsSync(macosPath),
+      });
+    }
   }
 
   return locations;

@@ -26,6 +26,7 @@ Use `Ctrl+Shift+P` (or `Cmd+Shift+P` on macOS) and search for "Ghostty: Open Con
 
 Supported config locations:
 - XDG: `~/.config/ghostty/config`
+- macOS: `~/Library/Application Support/com.mitchellh.ghostty/config.ghostty`
 - macOS: `~/Library/Application Support/com.mitchellh.ghostty/config`
 
 ## Configuration
